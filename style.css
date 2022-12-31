@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Big Shoulders Display', cursive;
+}
+body{
+    background-color: var(--Very-light-gray);
+}
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-block{
+    width: 900px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 10px;
+    overflow: hidden;
+    /* background-color: rgb(154, 61, 61); */
+}
+.card{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.card-block__title{
+    color: var(--Very-light-gray);
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.card-block__description{
+    color: var(--Transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+.card-block__button{
+    transition: 0.5s;
+    background-color: var(--Very-light-gray);
+    margin-top: 100px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 25px;
+    border: var(--Very-light-gray) solid 2px ;
+}
+.card-block__sedans .card-block__button{
+    color: var(--Bright-orange);
+}
+.card-block__sedans .card-block__button:hover{
+    transition: 0.5s;
+    color: var(--Very-light-gray);
+    background-color: var(--Bright-orange);
+}
+.card-block__suvs .card-block__button{
+    color: var(--Dark-cyan);
+}
+.card-block__suvs .card-block__button:hover{
+    transition: 0.5s;
+    color: var(--Very-light-gray);
+    background-color: var(--Dark-cyan);
+}
+.card-block__lux .card-block__button{
+    color: var(--Very-dark-cyan);
+}
+.card-block__lux .card-block__button:hover{
+    transition: 0.5s;
+    color: var(--Very-light-gray);
+    background-color: var(--Very-dark-cyan);
+}
+.card-block__sedans {
+    background-color: var(--Bright-orange);
+}
+.card-block__suvs{
+    background-color: var(--Dark-cyan);
+}
+.card-block__lux{
+    background-color: var(--Very-dark-cyan);
+} 
+
+@media (max-width: 1000px){
+    .card-block{
+        margin: 30px 20px 30px 20px;
+        min-height: 1500px;
+        width: 500px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 500px);
+    }
+}
